@@ -1,0 +1,72 @@
+.body-catalogs {
+    margin-top: 2em;
+    margin-bottom: 45px;
+}
+
+.body-catalogs .catalogs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-catalogs .catalogs-container .header {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-bottom: 1em;
+}
+
+.body-catalogs .catalogs-container .catalogs {
+    display: grid;
+    grid-template-columns: repeat(5, 225px);
+    grid-gap: 10px;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 0;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog {
+    margin-bottom: 0;
+}
+.body-catalogs .catalogs-container .catalogs .catalog .image {
+    margin-bottom: .5em;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog .description .text {
+    margin-bottom: .5em;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog .description .link {
+    color: #263C8A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.body-catalogs .under-certs {
+    display: flex;
+    justify-content: end;
+    padding: 0 20%;
+}
+
+.body-catalogs .under-certs .btn-show-more {
+    margin-top: 1em;
+    padding: .5em 2em;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: white;
+    background: #263C8A;
+    border: 0;
+}
+

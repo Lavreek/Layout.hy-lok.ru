@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    min-width: 1920px;
+    max-width: 1920px;
+    width: 100%;
+}
+
+p, div {
+    font-family: Inter;
+}
+
+section div + div {
+    /*margin-bottom: 2em;*/
+}
+
+.link-mailto {
+    color: inherit;
+    text-decoration: none;
+}

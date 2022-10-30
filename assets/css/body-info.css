@@ -1,0 +1,28 @@
+section .body-info {
+    display: grid;
+    grid-template-columns: repeat(2, 740px);
+    padding: 2em 200px;
+    padding-top: 4em;
+    grid-gap: 40px;
+    align-items: center;
+}
+
+section .body-info .description .text-header {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 2em;
+}
+
+section .body-info .description p {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: .5rem;
+}
+section .body-info .description p + p {
+    margin-bottom: 1em;
+}
+
+section .body-info .description .text-tab:before {
+    content: '';
+    margin-left: 3em;
+}

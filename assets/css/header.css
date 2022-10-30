@@ -1,0 +1,53 @@
+header {
+    z-index: 9999;
+    position: fixed;
+
+    min-width: 1920px;
+    max-width: 1920px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90px;
+    padding: 0 200px;
+}
+
+.header-divider {
+    margin: 0;
+    margin-bottom: 90px;
+}
+
+header .header-action {
+    display: inherit;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header .header-links {
+    font-size: 18px;
+    display: inherit;
+    list-style: none;
+}
+
+header .header-action .header-links {
+    padding: 0 4em;
+}
+
+header .header-action .header-links li {
+    padding: 0 4em;
+}
+
+header .header-action .header-extra button {
+    padding: .75em 2em;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    border: 0;
+
+    color: white;
+    background: #263C8A;
+}

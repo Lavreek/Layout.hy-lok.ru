@@ -1,0 +1,24 @@
+section .body-another {
+    margin: 3em 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+section .body-another .header {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 1em;
+}
+
+section .body-another .companies {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+section .body-another .companies div {
+    margin: 0;
+    padding: 0 2em;
+}
