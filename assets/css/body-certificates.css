@@ -6,8 +6,8 @@
 }
 
 .body-certificates .carousel {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 0 200px;
+    margin-bottom: 0;
 }
 
 .body-certificates .header {
@@ -20,27 +20,45 @@
     font-size: 30px;
     line-height: 36px;
 }
-.body-certificates .carousel {
-    margin-bottom: 0;
-}
+
 .body-certificates .carousel-item {
     margin-bottom: 0;
 }
+
 .body-certificates .carousel-item .certificates {
-    display: grid;
-    grid-template-columns: repeat(4, 350px);
+    display: flex;
     grid-gap: 40px;
     justify-content: center;
 }
 
 .body-certificates .carousel-item .certificates .cert {
+    width: 350px;
     margin-bottom: 0;
 }
+
 .body-certificates .carousel-item .certificates .cert img {
     width: 100%;
 }
+
+.body-certificates .carousel-control-prev {
+    filter: invert(100%);
+    padding-left: 100px;
+}
+
+.body-certificates .carousel-control-next {
+    filter: invert(100%);
+    padding-right: 100px;
+}
+
 .body-certificates .carousel-control-next, .body-certificates .carousel-control-prev {
     width: 5% !important;
+}
+.body-certificates .carousel-control-next-icon {
+    padding-right: 100px;
+}
+
+.body-certificates .carousel-control-prev-icon {
+    padding-left: 100px;
 }
 
 .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {

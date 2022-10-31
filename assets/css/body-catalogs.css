@@ -19,17 +19,18 @@
 }
 
 .body-catalogs .catalogs-container .catalogs {
-    display: grid;
-    grid-template-columns: repeat(5, 225px);
+    display: flex;
+    flex-wrap: wrap;
     grid-gap: 10px;
     align-items: start;
     justify-content: center;
     text-align: center;
 
-    margin-bottom: 0;
+    padding: 0 200px;
 }
 
 .body-catalogs .catalogs-container .catalogs .catalog {
+    width: 225px;
     margin-bottom: 0;
 }
 .body-catalogs .catalogs-container .catalogs .catalog .image {
@@ -55,7 +56,7 @@
 .body-catalogs .under-certs {
     display: flex;
     justify-content: end;
-    padding: 0 20%;
+    padding: 0 200px;
 }
 
 .body-catalogs .under-certs .btn-show-more {

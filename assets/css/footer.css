@@ -1,7 +1,9 @@
 footer {
     padding: 46px 200px;
     background: #263C8A;
+}
 
+footer .footer-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,18 +13,18 @@ footer ul {
     list-style: none;
 }
 
-footer .footer-logo, footer .footer-contacts, footer .footer-links {
+footer .footer-container .footer-logo, footer .footer-contacts, footer .footer-links {
     display: inherit;
     flex-direction: column;
 }
 
-footer .footer-logo .links ul {
+footer .footer-container .footer-logo .links ul {
     display: flex;
     flex-direction: column;
     padding: 40px 0;
 }
 
-footer .footer-logo .links ul li {
+footer .footer-container .footer-logo .links ul li {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -30,11 +32,11 @@ footer .footer-logo .links ul li {
     color: #848484;
 }
 
-footer .footer-logo .date {
+footer .footer-container .footer-logo .date {
     color: white;
 }
 
-footer .footer-links, footer .footer-contacts {
+footer .footer-container .footer-links, footer .footer-contacts {
     color: white;
 }
 
@@ -45,16 +47,29 @@ footer .footer-links, footer .footer-contacts {
     padding-right: 10%;
 }
 
-footer .footer-links .header, footer .footer-contacts .header {
+footer .footer-container .footer-links .header, footer .footer-contacts .header {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
 }
 
-footer .footer-links .text, footer .footer-contacts .text {
+footer .footer-container .footer-links .text, footer .footer-contacts .text {
     padding: 1em 0;
 
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+}
+
+footer .under-footer .date {
+    color: white;
+}
+
+footer .header {
+    margin-bottom: 0;
+}
+
+footer .link-mailto {
+    color: white;
+    text-decoration: none;
 }

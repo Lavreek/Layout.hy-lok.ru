@@ -8,7 +8,7 @@
     <meta name="description" content="На сайте вы сможете найти обширный каталог оборудования hy-lok В Москве. Доставка по всей стране. Наши консультанты всегда помогут с каталогом hy-lok, обращайтесь по телефону">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/general.css?<?= $time; ?>">
+    <link rel="stylesheet" href="assets/css/general.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/css/header.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/css/body-scroll.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/css/body-banner.css?<?= time(); ?>">
@@ -19,7 +19,13 @@
     <link rel="stylesheet" href="assets/css/body-certificates.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/css/footer.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/css/modal.css?<?= time(); ?>">
-    <?= $media ?>
+
+    <link rel="stylesheet" href="assets/media/media-1440.css?<?= time(); ?>">
+    <link rel="stylesheet" href="assets/media/media-1024.css?<?= time(); ?>">
+    <link rel="stylesheet" href="assets/media/media-768.css?<?= time(); ?>">
+    <link rel="stylesheet" href="assets/media/media-576.css?<?= time(); ?>">
+    <link rel="stylesheet" href="assets/media/media-425.css?<?= time(); ?>">
+    <link rel="stylesheet" href="assets/media/media-320.css?<?= time(); ?>">
 </head>
 <body>
     <header>
@@ -30,8 +36,14 @@
         </div>
         <div class="header-action">
             <ul class="header-links">
-                <li><a class="link-mailto" href="mailto:mail@hy-lok.ru">mail@hy-lok.ru</a></li>
-                <li>+7 (900) 123-45-67</li>
+                <li><a class="link-mailto mailto-header" href="mailto:mail@hy-lok.ru">
+                    <label class="mailto-title">mail@hy-lok.ru</label>
+                    <img class="mailto-mini" src="assets/mailto.svg">
+                </a></li>
+                <li><a class="link-telto telto-header" href="tel:+70000000000">
+                    <label class="telto-title">+7 (900) 123-45-67</label>
+                    <img class="telto-mini" src="assets/telto.svg">
+                </a></li>
             </ul>
             <div class="header-extra">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Как заказать</button>
@@ -86,12 +98,12 @@
                 <p class="text-tab">Говорят, что современное общество — это общество технологий и информации. Являясь специалистом в области производства систем контроля и управления жидкостей и газа, <!--noindex-->компания Hy-Lok<!--/noindex--> прилагает все усилия для предоставления клиентам более качественных технологий и услуг. <!--noindex-->Фитинги<!--/noindex--> производства компании Hy-Lok<!--/noindex--> разрабатывались с особой тщательностью, чтобы соответствовать спецификациям, необходимым для широкого спектра применений в различных отраслях промышленности и соответствовать производственным стандартам.</p>
             </div>
         </div>
-        <div style="display: flex; font-weight: 500; font-size: 30px; line-height: 36px; padding-left: 200px; margin-bottom: 1em;">
+        <div class="body-productions-header">
             Каталог продукции Hy-Lok
         </div>
         <div class="body-productions">
             <div class="product" id="product">
-                <div>
+                <div class="product-hover">
                     <div class="caption">
                         <ul style="margin: 0;">
                             <li>трубные</li>
@@ -236,51 +248,7 @@
                     <p>Каталоги</p>
                 </div>
                 <div class="catalogs">
-                    <div class="catalog">
-                        <div class="image">
-                            <img src="assets/catalog.svg">
-                        </div>
-                        <div class="description">
-                            <p class="text"><!--noindex-->Каталог фитингов и труб<!--/noindex--></p>
-                            <a class="link" href="#" download>Скачать</a>
-                        </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="image">
-                            <img src="assets/catalog.svg">
-                        </div>
-                        <div class="description">
-                            <p class="text"><!--noindex-->Каталог клапанов<!--/noindex--></p>
-                            <a class="link" href="#" download>Скачать</a>
-                        </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="image">
-                            <img src="assets/catalog.svg">
-                        </div>
-                        <div class="description">
-                            <p class="text"><!--noindex-->Каталог<!--/noindex--> для чистых сред ZCR</p>
-                            <a class="link" href="#" download>Скачать</a>
-                        </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="image">
-                            <img src="assets/catalog.svg">
-                        </div>
-                        <div class="description">
-                            <p class="text"><!--noindex-->Каталог<!--/noindex--> интрументальных манифольдов</p>
-                            <a class="link" href="#" download>Скачать</a>
-                        </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="image">
-                            <img src="assets/catalog.svg">
-                        </div>
-                        <div class="description">
-                            <p class="text"><!--noindex-->Каталог фитингов под приварку<!--/noindex--></p>
-                            <a class="link" href="#" download>Скачать</a>
-                        </div>
-                    </div>
+                    <?= $catalogs; ?>
                 </div>
             </div>
             <div class="under-certs">
@@ -295,80 +263,64 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="50000">
                         <div class="certificates">
-                            <div class="cert">
-                                <img src="assets/certs/cert1.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert2.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert3.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert4.png">
-                            </div>
+                            <?= $certificates ?>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="50000">
                         <div class="certificates">
-                            <div class="cert">
-                                <img src="assets/certs/cert1.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert2.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert3.png">
-                            </div>
-                            <div class="cert">
-                                <img src="assets/certs/cert4.png">
-                            </div>
+                            <?= $certificates ?>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" style="filter: invert(100%); padding-left: 100px;" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true" style="padding-left: 100px;"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Предыдущий</span>
                 </button>
-                <button class="carousel-control-next" style="filter: invert(100%); padding-right: 100px;" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true" style="padding-right: 100px;"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Следующий</span>
                 </button>
             </div>
         </div>
     </section>
     <footer>
-        <div class="footer-logo">
-            <div class="image">
-                <img src="assets/logo-footer.svg">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="image">
+                    <img src="assets/logo-footer.svg">
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a>Карта сайта</a></li>
+                        <li><a>Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="links">
-                <ul>
-                    <li><a>Карта сайта</a></li>
-                    <li><a>Политика конфиденциальности</a></li>
+            <div class="footer-links">
+                <p class="header">Ссылки</p>
+                <ul class="text">
+                    <li><a>Корпорация Hy-Lok</a></li>
+                    <li><a><!--noindex-->Hy-Lok<!--/noindex--> CША</a></li>
+                    <li><a><!--noindex-->Hy-Lok<!--/noindex--> Европа</a></li>
+                    <li><a><!--noindex-->Hy-Lok<!--/noindex--> Китай</a></li>
                 </ul>
             </div>
+            <div class="footer-contacts">
+                <p class="header">Контакты</p>
+                <ul class="text">
+                    <li><a class="link-mailto" href="mailto:mail@hy-lok.ru">mail@hy-lok.ru</a></li>
+                    <li><a>г. Москва</a></li>
+                    <li><a>+7 (900) 123-45-67</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="under-footer">
             <div class="date">
                 <p>2009-2022</p>
             </div>
         </div>
-        <div class="footer-links">
-            <p class="header">Ссылки</p>
-            <ul class="text">
-                <li><a>Корпорация Hy-Lok</a></li>
-                <li><a><!--noindex-->Hy-Lok<!--/noindex--> CША</a></li>
-                <li><a><!--noindex-->Hy-Lok<!--/noindex--> Европа</a></li>
-                <li><a><!--noindex-->Hy-Lok<!--/noindex--> Китай</a></li>
-            </ul>
-        </div>
-        <div class="footer-contacts">
-            <p class="header">Контакты</p>
-            <ul class="text">
-                <li><a class="link-mailto" href="mailto:mail@hy-lok.ru">mail@hy-lok.ru</a></li>
-                <li><a>г. Москва</a></li>
-                <li><a>+7 (900) 123-45-67</a></li>
-            </ul>
-        </div>
+
     </footer>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

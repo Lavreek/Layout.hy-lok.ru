@@ -14,6 +14,7 @@ section .body-another .header {
 section .body-another .companies {
     display: inherit;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: start;
 }
