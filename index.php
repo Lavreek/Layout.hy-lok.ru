@@ -41,11 +41,11 @@
         $width = $_COOKIE['width'];
 
         switch ($width) {
-            case ($width == "sm"):
+            case ($width < 425 ):
                 $certificates = putCertificates(2);
                 break;
 
-            case ($width == "md" or $width == "lg"):
+            case ($width >= 425 or $width <= 1440):
                 $certificates = putCertificates(3);
                 break;
 

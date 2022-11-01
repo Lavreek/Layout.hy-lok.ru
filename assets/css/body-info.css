@@ -1,14 +1,12 @@
 section .body-info {
-    display: grid;
-    grid-template-columns: repeat(2, 740px);
-    padding: 2em 200px;
     padding-top: 4em;
-    grid-gap: 40px;
-    align-items: center;
+    padding-bottom: 4em;
 }
 
 section .body-info .preview {
-    margin: 0;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 section .body-info .preview img {
@@ -28,11 +26,63 @@ section .body-info .description p {
     line-height: 25px;
     margin-bottom: .5rem;
 }
+
 section .body-info .description p + p {
     margin-bottom: 1em;
 }
 
-section .body-info .description .text-tab:before {
-    content: '';
-    margin-left: 3em;
+@media (min-width: 1440.1px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+    section .body-info .preview {
+        margin-top: 20px;
+        width: 45vw;
+    }
+
+    section .body-info .description {
+        margin-top: -45px;
+    }
+
+    section .body-info .description .text-header {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    section .body-info {
+        margin-top: 40px;
+    }
+
+    section .body-info .preview {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    section .body-info .description {
+        margin-top: -70px;
+    }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+    section .body-info {
+        padding-top: 110px;
+    }
+
+    section .body-info .preview {
+        width: 80%;
+    }
 }

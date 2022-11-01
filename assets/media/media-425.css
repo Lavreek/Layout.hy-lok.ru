@@ -1,16 +1,10 @@
-@media (max-width: 425px) {
+@media (max-width: 425px) and (min-width: 375px) {
+    section .body-productions {
+        grid-gap: 15px;
+    }
+
     ul {
         margin-bottom: 0;
-    }
-
-    header {
-        align-items: center;
-        padding: 0 22px;
-        height: 46px;
-    }
-
-    .header-divider {
-        margin-bottom: 46px;
     }
 
     header .header-action {
@@ -21,17 +15,6 @@
         flex-direction: row;
         align-items: center;
         padding: 0;
-    }
-
-    header .header-action .header-extra {
-        position: fixed;
-        right: 16px;
-        bottom: 24px;
-        border-radius: 12px;
-    }
-
-    header .header-action .header-extra button {
-        padding: .5em 2em;
     }
 
     header .header-action .header-links li {
@@ -49,7 +32,6 @@
 
     section .body-info {
         display: block;
-        padding: 0 25px;
         padding-top: 110px;
         padding-bottom: 20px;
     }
@@ -75,25 +57,10 @@
         margin-left: 0;
     }
 
-    .body-productions-header {
-        padding-left: 25px;
-    }
-
     section .body-productions {
-        padding: 0 25px;
-        grid-gap: 20px;
         justify-content: space-evenly;
     }
 
-    section .body-productions .product .caption {
-        padding: .5em;
-    }
-
-
-
-    section .body-another {
-        margin: 3em 25px;
-    }
 
     section .body-another .companies {
         flex-wrap: wrap;
@@ -126,10 +93,6 @@
         width: 70px;
     }
 
-    .body-certificates .carousel {
-        padding: 0 25px;
-    }
-
     .body-certificates .carousel-item .certificates {
         grid-gap: 20px;
     }
@@ -142,14 +105,6 @@
         height: 62px !important;
     }
 
-    .body-certificates .carousel-control-next {
-        padding-right: 20px;
-    }
-
-    .body-certificates .carousel-control-prev {
-        padding-left: 20px;
-    }
-
     .body-certificates .carousel-control-next-icon {
         padding-right: 50px;
     }
@@ -159,15 +114,12 @@
     }
 
     footer {
-        padding: 41px 25px;
+        padding-top: 41px;
+        padding-bottom: 41px;
     }
 
     footer .footer-container {
         flex-wrap: wrap;
-    }
-
-    footer .footer-container .footer-logo {
-        min-width: 100%;
     }
 
     footer .footer-container .footer-links {
@@ -185,5 +137,4 @@
     .footer-contacts {
         padding-right: 0;
     }
-
 }

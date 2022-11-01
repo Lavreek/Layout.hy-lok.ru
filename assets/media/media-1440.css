@@ -1,65 +1,29 @@
-@media (max-width: 1441px) {
-    header {
-        height: 85px;
-        padding: 0 156px;
+@media (min-width: 1440.1px) {
+    section .body-info .preview {
+        width: 740px;
+        height: 467px;
     }
 
-    .header-divider {
-        margin-bottom: 85px;
+    section .body-productions .caption-cover {
+        padding-top: 1em;
+        padding-left: 2em;
     }
-
+}
+@media (max-width: 1440px) and (min-width: 1024px) {
     header .header-logo a img {
         width: 225px;
     }
 
-    header .header-action .header-links {
-        padding: 0 54px;
-    }
-
-    header .header-action .header-links li {
-        padding: 0 54px;
-    }
-
-    .body-scroll {
-        padding: 0 156px;
-    }
-
     section .body-info {
         display: block;
-        padding: 70px 156px;
-    }
-
-    section .body-info .preview {
-        float: left;
-        margin-right: 40px;
-        margin-bottom: 40px;
-    }
-
-    section .body-info .preview {
-        width: 740px;
-        height: 538px;
     }
 
     section .body-info .description p + p {
         margin-bottom: 2em;
     }
 
-    section .body-info .description .text-tab:before {
-        margin-left: 0;
-    }
-
-    .body-productions-header {
+    section .body-productions-header {
         padding-left: 156px;
-    }
-
-    section .body-productions {
-        padding: 0 156px;
-        grid-gap: 39px;
-        justify-content: unset;
-    }
-
-    section .body-another {
-        margin: 3em 156px;
     }
 
     section .body-another .companies div {
@@ -69,10 +33,6 @@
     section .body-another .companies div img {
         max-width: 300px;
         height: 63px;
-    }
-
-    .body-catalogs .under-certs {
-        padding: 0 156px;
     }
 
     .body-certificates .carousel {
@@ -85,10 +45,6 @@
 
     .body-certificates .carousel-control-prev {
         padding-left: 56px;
-    }
-
-    footer {
-        padding: 46px 156px;
     }
 
     .footer-contacts {

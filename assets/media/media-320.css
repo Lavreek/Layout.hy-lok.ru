@@ -1,14 +1,15 @@
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 375px) {
     .body-catalogs .catalogs-container .catalogs {
         display: flex;
         flex-wrap: wrap;
         padding: 0;
     }
 
-    section .body-productions .product {
-        width: 150px;
+    section .body-productions-header,
+    section .body-productions {
+        padding-left: 20px;
+        padding-right: 20px;
     }
-
 
     section .body-productions .product .product-hover {
         width: 100%;
@@ -30,7 +31,6 @@
     .product-hover .caption, .product-hover .image {
         width: 100% !important;
     }
-
 }
 
 @media (max-width: 320px) {
@@ -41,11 +41,6 @@
     header {
         align-items: center;
         padding: 0 22px;
-        height: 46px;
-    }
-
-    .header-divider {
-        margin-bottom: 46px;
     }
 
     header .header-action {
@@ -125,36 +120,8 @@
         margin-left: 0;
     }
 
-    .body-productions-header {
-        padding: 0 22px;
-    }
-
-    section .body-productions {
-        padding: 0 22px;
-        grid-gap: 12px;
-        justify-content: space-evenly;
-    }
-
-    section .body-productions .product .caption {
-        padding: .5em;
-    }
-
-    section .body-productions .product, section .body-productions .product .caption {
-        width: 132px;
-    }
-
-    section .body-productions .product .caption {
-        max-height: 129px;
-        max-width: 129px;
-        overflow: hidden;
-        font-size: 14px;
-    }
-    section .body-productions .product .header {
-        font-size: 16px;
-    }
-
     section .body-another {
-        margin: 3em 22px;
+        margin: 3em 0;
     }
 
     section .body-another .companies {

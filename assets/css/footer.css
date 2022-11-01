@@ -1,5 +1,6 @@
 footer {
-    padding: 46px 200px;
+    padding-top: 46px;
+    padding-bottom: 46px;
     background: #263C8A;
 }
 
@@ -72,4 +73,60 @@ footer .header {
 footer .link-mailto {
     color: white;
     text-decoration: none;
+}
+
+@media (min-width: 1440.1px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 1em;
+    }
+
+    footer .footer-container .footer-logo {
+        min-width: 100%;
+    }
+
+    footer .footer-links {
+        padding: 0;
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .footer-container {
+        flex-wrap: wrap;
+        justify-content: start;
+        margin-bottom: 1em;
+    }
+
+    footer .footer-links {
+        padding: 0;
+        width: 50%;
+    }
+
+    footer .footer-logo .image img {
+        width: 170px;
+    }
+}
+
+@media (max-width: 425px) {
+    footer .footer-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 375px) {
+
 }

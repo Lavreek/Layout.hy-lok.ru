@@ -1,50 +1,10 @@
-@media (max-width: 768px) {
-    header {
-        padding: 0 30px;
-        height: 109px;
-    }
-
-    .header-divider {
-        margin-bottom: 109px;
-    }
-
-    header .header-action {
-        align-items: center;
-    }
-
-    header .header-action .header-links {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 0;
-    }
-
-    header .header-logo a img {
-        width: 225px;
-    }
-
-    .body-scroll {
-        display: none !important;
-    }
-
-    section .body-info {
-        display: block;
-        padding: 70px 30px;
-        padding-top: 110px;
-    }
-
+@media (max-width: 768px) and (min-width: 576px) {
     section .body-info .preview {
         float: left;
-        width: 100vw;
-
         text-align: center;
 
         margin-top: 40px;
         margin-bottom: 40px;
-    }
-
-    section .body-info .description {
-        width: 100vw;
-        margin-top: -40px;
     }
 
     section .body-info .description p + p {
@@ -53,59 +13,6 @@
 
     section .body-info .description .text-tab:before {
         margin-left: 0;
-    }
-
-    .body-productions-header {
-        padding-left: 30px;
-    }
-
-    section .body-productions {
-        padding: 0 30px;
-        grid-gap: 23px;
-        justify-content: unset;
-    }
-
-    section .body-productions .product .caption {
-        padding: 1.5em;
-    }
-
-    section .body-productions .product .product-hover .image, section .body-productions .product-hover .product .caption {
-        width: 210px;
-        /*max-height: 210px;*/
-        /*max-width: 210px;*/
-        overflow: hidden;
-    }
-
-    section .body-productions .product .caption {
-        height: 210px;
-
-        overflow: hidden;
-    }
-
-    section .body-another {
-        margin: 3em 30px;
-    }
-
-    section .body-another .companies div {
-        padding: 0;
-        padding-right: 1.7em;
-    }
-
-    section .body-another .companies div img {
-        max-width: 180px;
-        height: 39px;
-    }
-
-    .body-catalogs .under-certs {
-        padding: 0 30px;
-    }
-
-    .body-catalogs .catalogs-container .catalogs {
-        display: flex;
-        flex-wrap: wrap;
-
-        max-height: 190px;
-        overflow: hidden;
     }
 
     .body-catalogs .catalogs-container .catalogs .catalog {

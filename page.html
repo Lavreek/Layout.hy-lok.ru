@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-    <?= $base; ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hy-lok - купить в Москве по низкой цене | полный каталог оборудования </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="На сайте вы сможете найти обширный каталог оборудования hy-lok В Москве. Доставка по всей стране. Наши консультанты всегда помогут с каталогом hy-lok, обращайтесь по телефону">
+    <?= $base; ?>
+
+    <link rel="canonical" href="https://hy-lok.ru/" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/general.css?<?= time(); ?>">
@@ -23,9 +25,24 @@
     <link rel="stylesheet" href="assets/media/media-1440.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/media/media-1024.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/media/media-768.css?<?= time(); ?>">
-    <link rel="stylesheet" href="assets/media/media-576.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/media/media-425.css?<?= time(); ?>">
     <link rel="stylesheet" href="assets/media/media-320.css?<?= time(); ?>">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(90956616, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/90956616" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <header>
@@ -46,7 +63,7 @@
                 </a></li>
             </ul>
             <div class="header-extra">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Как заказать</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalForm">Как заказать</button>
             </div>
         </div>
     </header>
@@ -92,131 +109,145 @@
             </div>
             <div class="description">
                 <p class="text-header">Представитель Hy-Lok в России!</p>
-                <p class="text-tab">Компания <!--noindex-->Hy-Lok<!--/noindex--> (Южная Корея) является ведущим мировым производителем оборудования для нефтехимической промышленности и нефтегазового рынка. Обширный каталог изделий <!--noindex-->компании Hy-Lok<!--/noindex--> делает возможным реализацию практически любой технической задачи, от простейшего механического соединения до создания системы гидравлического управления.</p>
-                <p class="text-tab">Hy-Lok производит широкий спектр стандартных и индивидуальных деталей под заказ для сжатого природного газа и других сред, включая клапаны, фитинги, шланги и гидравлические инструменты для предварительной настройки. Продукция <!--noindex-->Hy-Lok<!--/noindex--> применяется в таких отраслях как аэрокосмическая, химическая, фармацевтическая, энергетическая, бумажная и другие. </p>
-                <p class="text-tab">С момента своего основания в 1977 году компания <!--noindex-->Hy-Lok<!--/noindex--> неуклонно поддерживает свой собственный курс, сохраняя при этом лидирующие позиции в мире в области производства систем контроля и управления жидкостей и газа. Благодаря многолетнему опыту компания <!--noindex-->Hy-Lok<!--/noindex--> поставляет на мировой рынок приборостроения системы запорной арматуры и трубопроводы из различных материалов. Обладая практическим опытом компания <!--noindex-->Hy-Lok<!--/noindex-->отлично зарекомендовала себя в качестве предприятия «под ключ», начиная с основных технологий систем подачи и управления жидкостями и газами и заканчивая качеством изготовления для промышленных установок во всем мире. Большой запас знаний по накопленной технической базе будет предоставлен нашим заказчикам.</p>
-                <p class="text-tab">Говорят, что современное общество — это общество технологий и информации. Являясь специалистом в области производства систем контроля и управления жидкостей и газа, <!--noindex-->компания Hy-Lok<!--/noindex--> прилагает все усилия для предоставления клиентам более качественных технологий и услуг. <!--noindex-->Фитинги<!--/noindex--> производства компании Hy-Lok<!--/noindex--> разрабатывались с особой тщательностью, чтобы соответствовать спецификациям, необходимым для широкого спектра применений в различных отраслях промышленности и соответствовать производственным стандартам.</p>
+                <p>Компания <!--noindex-->Hy-Lok<!--/noindex--> (Южная Корея) является ведущим мировым производителем оборудования для нефтехимической промышленности и нефтегазового рынка. Обширный каталог изделий <!--noindex-->компании Hy-Lok<!--/noindex--> делает возможным реализацию практически любой технической задачи, от простейшего механического соединения до создания системы гидравлического управления.</p>
+                <p>Hy-Lok производит широкий спектр стандартных и индивидуальных деталей под заказ для сжатого природного газа и других сред, включая клапаны, фитинги, шланги и гидравлические инструменты для предварительной настройки. Продукция <!--noindex-->Hy-Lok<!--/noindex--> применяется в таких отраслях как аэрокосмическая, химическая, фармацевтическая, энергетическая, бумажная и другие. </p>
+                <p>С момента своего основания корпорация <!--noindex-->Hy-Lok<!--/noindex--> сохранет лидирующие мировые позиции в области производства систем управления и контроля жидкостей, газа. Благодаря многолетнему опыту компания Hy-Lok поставляет на мировой рынок приборостроения системы запорной арматуры и трубопроводы из различных материалов. Обладая практическим опытом компания Hy-Lok отлично зарекомендовала себя в качестве предприятия «под ключ», начиная с основных технологий систем подачи и управления жидкостями и газами и заканчивая качеством изготовления для промышленных установок во всем мире. Большой запас знаний по накопленной технической базе будет предоставлен нашим заказчикам.</p>
+                <p>Говорят, что современное общество состоит из технологий. Являясь специалистом в области производства систем контроля и управления жидкостей и газа, корпорация Hy-Lok прилагает все усилия для предоставления клиентам более качественных технологий и услуг. Фитинги производства компании Hy-Lok разрабатывались с особой тщательностью, для того, чтобы соответствовать всем необходимым требованиям для широкого спектра эксплуатаций в самых разнообразных промышленных отраслях и соответствовать производственным стандартам.</p>
             </div>
         </div>
         <div class="body-productions-header">
             Каталог продукции Hy-Lok
         </div>
         <div class="body-productions">
-            <div class="product" id="product">
-                <div class="product-hover">
-                    <div class="caption">
-                        <ul style="margin: 0;">
-                            <li>трубные</li>
-                            <li>резьбовые</li>
-                            <li>приварные</li>
-                            <li>под шланг</li>
-                            <li>DIN</li>
-                            <li>ZCO</li>
-                            <li>БРС</li>
-                            <li>под развольцовку</li>
-                            <li>на высокое давление</li>
-                        </ul>
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/fittings.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/fittings.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>трубные</li>
+                        <li>резьбовые</li>
+                        <li>приварные</li>
+                        <li>под шланг</li>
+                        <li>DIN</li>
+                        <li>ZCO</li>
+                        <li>БРС</li>
+                        <li>под развольцовку</li>
+                        <li>на высокое давление</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Фитинги
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        Клапаны
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/valves.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/valves.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>Игольчатые <!--noindex-->вентили<!--/noindex--></li>
+                        <li>шаровые краны</li>
+                        <li>мембранные клапаны</li>
+                        <li>сильфонные клапаны</li>
+                        <li>соленоидные клапаны</li>
+                        <li>предохранительные клапаны</li>
+                        <li>обратные клапаны</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Клапаны
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        Трубки и шланги
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/tubes.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/tubes.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>гибкие металлические шланги</li>
+                        <li>трубные пучки</li>
+                        <li>трубки</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Трубки и шланги
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        Регуляторы давления
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/pressure.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/pressure.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>одноступенчатый регулятор снижения давления</li>
+                        <li>двухступенчатый регулятор снижения давления</li>
+                        <li>регуляторы испарения</li>
+                        <li>регулятор снижения обратного давления</li>
+                        <li>криоВиз, криогенное переключение</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Регуляторы давления
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        <ul style="margin: 0;">
-                            <li><a>Шаровые краны из нержавеющей стали</a></li>
-                            <li><a>Сильфонные вентили</a></li>
-                            <li><a>Нержавеющие манифольды</a></li>
-                            <li><a>Игольчатые <!--noindex-->вентили<!--/noindex--></a></li>
-                            <li><a>Предохранительные клапаны</a></li>
-                        </ul>
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/uhp.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/uhp.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>сильфонные клапаны  серии BL</li>
+                        <li>серия BLF – Сильфонные клапаны</li>
+                        <li>серия DV – Мембранные клапаны</li>
+                        <li>сварочные фитинги (инструментальная резьба и микро)</li>
+                        <li>применение торцевых уплотнений ZCR</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Продукция UHP
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        Компоненты среднего/высокого давления
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/high.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/high.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>фитинги среднего/высокого давления</li>
+                        <li>клапаны среднего/высокого давления</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Компоненты среднего/высокого давления
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        <!--noindex-->Специальные возможности<!--/noindex-->
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/special.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/special.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>блокировка игольчатого клапана</li>
+                        <li>Hy-Lok от HACO SUPERBOX</li>
+                        <li>смотровые очки</li>
+                        <li>воздухораспределительные коллекторы</li>
+                        <li>приводные клапаны в сборе</li>
+                    </ul>
                 </div>
                 <div class="header">
-                    Специальные возможности
+                    <!--noindex-->Специальные возможности<!--/noindex-->
                 </div>
             </div>
-            <div class="product">
-                <div>
-                    <div class="caption">
-                        <!--noindex-->Пробоотборные цилиндры и клапаны<!--/noindex-->
-                    </div>
-                    <div class="image">
-                        <img src="/assets/products/cylinders.png">
-                    </div>
+            <div class="product" data-bs-toggle="modal" data-bs-target="#modalForm">
+                <div class="image-cover">
+                    <img src="/assets/products/cylinders.png">
+                </div>
+                <div class="caption-cover">
+                    <ul>
+                        <li>алюминиевые баллоны</li>
+                        <li>сварные нержавеющие сосуды</li>
+                    </ul>
                 </div>
                 <div class="header">
                     Пробоотборные цилиндры и клапаны
@@ -323,7 +354,7 @@
 
     </footer>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <form method="POST" action="./">

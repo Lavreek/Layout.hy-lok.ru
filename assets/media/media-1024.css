@@ -1,88 +1,10 @@
-@media (max-width: 1025px) {
-    header {
-        padding-left: 45px;
-        padding-right: 70px;
-
-        height: 97px;
-    }
-
-    .header-divider {
-        margin-bottom: 97px;
-    }
-
-    header .header-action {
-        align-items: center;
-    }
-
-    header .header-action .header-links {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 0;
-    }
-
-    header .header-logo a img {
-        width: 225px;
-    }
-
-    .body-scroll {
-        padding: 0 156px;
-    }
-
-    section .body-info {
-        display: block;
-        padding: 70px 68px;
-        padding-top: 110px;
-    }
-
-    section .body-info .preview {
-        float: left;
-        margin-top: 40px;
-        margin-right: 40px;
-        margin-bottom: 40px;
-    }
-
-    section .body-info .preview {
-        width: 581px;
-        height: 388px;
-    }
-
-    section .body-info .description {
-        margin-top: -40px;
-    }
-
+@media (max-width: 1024px) and (min-width: 768px) {
     section .body-info .description p + p {
         margin-bottom: 2em;
     }
 
-    section .body-info .description .text-tab:before {
-        margin-left: 0;
-    }
-
-    .body-productions-header {
+    section .body-productions-header {
         padding-left: 68px;
-    }
-
-    section .body-productions {
-        padding: 0 68px;
-        grid-gap: 31px;
-        justify-content: unset;
-    }
-
-    section .body-productions .product .caption {
-        padding: 1.5em;
-    }
-
-    section .body-productions .product, section .body-productions .product .caption {
-        width: 275px;
-    }
-
-    section .body-another {
-        margin: 3em 68px;
-    }
-
-    section .body-another .companies div {
-        padding: 0;
-        padding-right: 2em;
     }
 
     section .body-another .companies div img {
@@ -90,21 +12,10 @@
         height: 63px;
     }
 
-    .body-catalogs .under-certs {
-        padding: 0 68px;
-    }
-
-    .body-catalogs .catalogs-container .catalogs {
-        display: flex;
-    }
-
     .body-catalogs .catalogs-container .catalogs .catalog {
         width: 225px;
     }
 
-    .body-certificates .carousel {
-        padding: 0 68px;
-    }
     .body-certificates .carousel-item .certificates .cert img {
         width: 245px;
     }
@@ -127,10 +38,6 @@
 
     .body-certificates .carousel-control-prev-icon {
         padding-left: 50px;
-    }
-
-    footer {
-        padding: 41px 68px;
     }
 
     .footer-contacts {

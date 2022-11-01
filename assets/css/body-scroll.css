@@ -1,8 +1,7 @@
 .body-scroll {
     position: absolute!important;
-    padding: 0 200px!important;
 
-    display: flex!important;
+    display: flex;
     flex-direction: row!important;
     margin: 0!important;
     justify-content: unset;
@@ -29,4 +28,34 @@
 
     border: 1px solid white!important;
     background: white!important;
+}
+
+@media (min-width: 1440.1px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    section .body-scroll {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
 }
