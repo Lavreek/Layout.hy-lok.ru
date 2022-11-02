@@ -1,15 +1,4 @@
 @media (max-width: 768px) and (min-width: 576px) {
-    section .body-info .preview {
-        float: left;
-        text-align: center;
-
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    section .body-info .description p + p {
-        margin-bottom: 2em;
-    }
 
     section .body-info .description .text-tab:before {
         margin-left: 0;

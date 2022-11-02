@@ -9,20 +9,8 @@ body {
     min-width: 320px;
 }
 
-a {
-    text-decoration: none;
-}
-
-a, p, div {
-    font-family: Inter;
-}
-
-ul {
+ul, p {
     margin-bottom: 0;
-}
-
-.link-mailto, .link-telto {
-    color: inherit;
 }
 
 @media (min-width: 1440.1px) {
@@ -33,11 +21,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
+    section .body-certificates .carousel {
+        padding-left: 10.43%;
+        padding-right: 10.43%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 10.43%;
+    }
+
     section .body-certificates .carousel-control-prev {
-        padding-left: 200px;
-        padding-right: 200px;
+        width: 10.43%;
     }
 }
 
@@ -49,11 +43,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
+    section .body-certificates .carousel {
+        padding-left: 10.76%;
+        padding-right: 10.76%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 10.76%;
+    }
+
     section .body-certificates .carousel-control-prev {
-        padding-left: 10.83%;
-        padding-right: 10.83%;
+        width: 10.76%;
     }
 }
 
@@ -65,11 +65,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 86px;
         padding-right: 86px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 86px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 86px;
     }
 }
 
@@ -81,11 +87,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 68px;
         padding-right: 68px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 68px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 68px;
     }
 }
 
@@ -97,11 +109,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 48px;
         padding-right: 48px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 48px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 48px;
     }
 
     .body-scroll {
@@ -117,11 +135,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 30px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 30px;
     }
 }
 
@@ -133,11 +157,17 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 25px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 25px;
     }
 }
 
@@ -149,10 +179,16 @@ ul {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
-    section .body-certificates .carousel,
-    section .body-certificates .carousel-control-next,
-    section .body-certificates .carousel-control-prev {
+    section .body-certificates .carousel {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 20px;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 20px;
     }
 }

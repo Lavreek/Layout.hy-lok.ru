@@ -25,14 +25,6 @@ footer .footer-container .footer-logo .links ul {
     padding: 40px 0;
 }
 
-footer .footer-container .footer-logo .links ul li {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-    color: #848484;
-}
-
 footer .footer-container .footer-logo .date {
     color: white;
 }
@@ -48,18 +40,9 @@ footer .footer-container .footer-links, footer .footer-contacts {
     padding-right: 10%;
 }
 
-footer .footer-container .footer-links .header, footer .footer-contacts .header {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-}
 
 footer .footer-container .footer-links .text, footer .footer-contacts .text {
     padding: 1em 0;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
 }
 
 footer .under-footer .date {
@@ -80,7 +63,9 @@ footer .link-mailto {
 }
 
 @media (max-width: 1440px) {
-
+    footer .footer-contacts {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 1024px) {

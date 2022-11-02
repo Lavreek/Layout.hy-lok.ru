@@ -31,22 +31,14 @@ header .header-action {
 }
 
 header .header-links {
-    font-size: 18px;
     display: inherit;
     list-style: none;
 }
 
-
-
 header .header-action .header-extra button {
-    padding: .75em 2em;
-
-    font-size: 18px;
-    line-height: 22px;
-
+    padding: .5em 3em;
     border: 0;
 
-    color: white;
     background: #263C8A;
 }
 
@@ -59,6 +51,10 @@ header .header-action .header-links li {
 }
 
 @media (max-width: 1440px) {
+    header .header-logo {
+        width: 225px;
+    }
+
     header .header-action .header-links li {
         padding: 0 3em;
     }
@@ -111,7 +107,7 @@ header .header-action .header-links li {
     }
 
     header, .header-divider {
-        height: 109px;
+        height: 89px;
     }
 
     header .header-action {

@@ -47,8 +47,6 @@ section .body-productions .product .image, section .body-productions .product .i
 
 section .body-productions .product .header {
     margin: 2em 0;
-    font-size: 22px;
-    line-height: 26px;
 }
 
 section .body-productions.product .image img {
@@ -92,6 +90,11 @@ section .body-productions .product .header {
 }
 
 @media (min-width: 1440.1px) {
+    section .body-productions .caption-cover {
+        padding-top: 1em;
+        padding-left: 2em;
+    }
+
     section .body-productions {
         grid-gap: 40px;
     }

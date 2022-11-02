@@ -4,9 +4,7 @@ section .body-info {
 }
 
 section .body-info .preview {
-    float: left;
     margin-right: 40px;
-    margin-bottom: 40px;
 }
 
 section .body-info .preview img {
@@ -14,29 +12,78 @@ section .body-info .preview img {
     height: inherit;
 }
 
-section .body-info .description .text-header {
-    font-size: 30px;
-    line-height: 34px;
-    font-weight: 700;
-    padding-bottom: 2em;
+section .body-info .description .description-text .collapse-container {
+    margin-top: 2em;
 }
 
-section .body-info .description p {
-    font-size: 17px;
-    line-height: 25px;
-    margin-bottom: .5rem;
+section .body-info .description .description-text .collapse-container p {
+    margin-bottom: 2em;
 }
 
-section .body-info .description p + p {
-    margin-bottom: 1em;
+section .body-info .description .description-collapse {
+    display: flex;
+    justify-content: end;
+    margin-top: 2em;
+}
+section .body-info .description .description-collapse button {
+    padding: .5em 3em;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    border: 0;
+
+    color: white;
+    background: #263C8A;
+}
+
+section .body-info .description .collapse .collapse-container {
+    display: flex;
+    /*grid-gap: 2em;*/
+    border: 0 !important;
+    position: relative;
+    flex-direction: column;
+    word-wrap: break-word;
 }
 
 @media (min-width: 1440.1px) {
+    section .body-info,
+    section .body-info .description {
+        display: flex;
+    }
 
+    section .body-info .description {
+        flex-direction: column;
+        grid-gap: 2em;
+    }
+
+    section .body-info .preview {
+        width: 740px;
+        height: 467px;
+    }
 }
 
 @media (max-width: 1440px) {
+    section .body-info,
+    section .body-info .description {
+        display: block;
+    }
 
+    section .body-info .preview {
+        margin-bottom: 40px;
+    }
+
+    section .body-info .description .text-header {
+        margin-bottom: 1.5em;
+    }
+
+    section .body-info .description .description-text p + p {
+        clear: left;
+    }
+
+    section .body-info .preview {
+        float: left;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -60,7 +107,7 @@ section .body-info .description p + p {
     }
 
     section .body-info .preview {
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
     }
 
@@ -70,19 +117,37 @@ section .body-info .description p + p {
 }
 
 @media (max-width: 576px) {
-
+    section .body-info .preview {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 425px) {
-
+    section .body-info {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-width: 375px) {
     section .body-info {
+        margin-top: 0;
         padding-top: 110px;
     }
 
     section .body-info .preview {
-        width: 80%;
+        margin-top: 0;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    section .body-info .preview {
+        /*width: 276px;*/
+        height: 200px;
+    }
+
+    section .body-info .description .text-header {
+        margin-bottom: .5em;
     }
 }
