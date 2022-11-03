@@ -6,20 +6,12 @@
 
     .body-catalogs .catalogs-container .catalogs .catalog {
         width: 170px;
-
     }
 
     .body-certificates .carousel {
         padding: 0 30px;
     }
 
-    .body-certificates .carousel-item .certificates {
-
-    }
-
-    .body-certificates .carousel-item .certificates .cert img {
-        width: 195px;
-    }
 
     .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
         height: 62px !important;
@@ -41,13 +33,6 @@
         padding-left: 50px;
     }
 
-    footer {
-        padding: 41px 30px;
-    }
-
-    .footer-contacts {
-        padding-right: 0;
-    }
     footer .footer-logo .image img {
         width: 225px;
     }

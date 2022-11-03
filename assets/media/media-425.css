@@ -79,20 +79,8 @@
         display: flex;
     }
 
-    .body-catalogs .catalogs-container .catalogs .catalog {
-        width: 130px;
-    }
-
     .body-catalogs .catalogs-container .catalogs .catalog .image img {
         width: 70px;
-    }
-
-    .body-certificates .carousel-item .certificates {
-        grid-gap: 20px;
-    }
-
-    .body-certificates .carousel-item .certificates .cert img, .body-certificates .carousel-item .certificates .cert {
-        width: 154px;
     }
 
     .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {

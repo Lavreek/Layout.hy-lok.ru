@@ -66,16 +66,16 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 86px;
-        padding-right: 86px;
+        padding-left: 6.7%;
+        padding-right: 6.7%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 86px;
+        width: 6.7%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 86px;
+        width: 6.7%;
     }
 }
 
@@ -88,16 +88,16 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 68px;
-        padding-right: 68px;
+        padding-left: 6.64%;
+        padding-right: 6.64%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 68px;
+        width: 6.64%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 68px;
+        width: 6.64%;
     }
 }
 
@@ -110,16 +110,16 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 48px;
-        padding-right: 48px;
+        padding-left: 6.25%;
+        padding-right: 6.25%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 48px;
+        width: 6.25%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 48px;
+        width: 6.25%;
     }
 
     .body-scroll {
@@ -136,16 +136,16 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 5.2%;
+        padding-right: 5.2%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 30px;
+        width: 5.2%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 30px;
+        width: 5.2%;
     }
 }
 
@@ -158,16 +158,16 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 5.8%;
+        padding-right: 5.8%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 25px;
+        width: 5.8%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 25px;
+        width: 5.8%;
     }
 }
 
@@ -180,15 +180,15 @@ ul, p {
     section .body-another,
     section .body-catalogs,
     section .body-certificates .carousel {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 5.3%;
+        padding-right: 5.3%;
     }
 
     section .body-certificates .carousel-control-next {
-        width: 20px;
+        width: 5.3%;
     }
 
     section .body-certificates .carousel-control-prev {
-        width: 20px;
+        width: 5.3%;
     }
 }

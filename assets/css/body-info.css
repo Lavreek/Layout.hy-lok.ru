@@ -39,7 +39,6 @@ section .body-info .description .description-collapse button {
 
 section .body-info .description .collapse .collapse-container {
     display: flex;
-    /*grid-gap: 2em;*/
     border: 0 !important;
     position: relative;
     flex-direction: column;
@@ -138,13 +137,9 @@ section .body-info .description .collapse .collapse-container {
     section .body-info .preview {
         margin-top: 0;
         width: 100%;
-        padding: 0 20px;
-        margin-bottom: 20px;
-    }
-
-    section .body-info .preview {
-        /*width: 276px;*/
         height: 200px;
+        padding: 0 0;
+        margin-bottom: 20px;
     }
 
     section .body-info .description .text-header {

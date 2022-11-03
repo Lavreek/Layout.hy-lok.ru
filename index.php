@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    error_reporting(0);
+
     $base = "<base href=\"{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['SERVER_NAME']}/\">";
 
     $media = "";
@@ -41,12 +44,16 @@
         $width = $_COOKIE['width'];
 
         switch ($width) {
-            case ($width < 425 ):
+            case ($width <= 576):
                 $certificates = putCertificates(2);
                 break;
 
-            case ($width >= 425 or $width <= 1440):
+            case ($width <= 1440 and $width > 576):
                 $certificates = putCertificates(3);
+                break;
+
+            case ($width <= 1920 and $width > 1440):
+                $certificates = putCertificates(4);
                 break;
 
             default:
@@ -57,7 +64,46 @@
 
     $catalogs = putCatalogs(5);
 
+    if (isset($_POST['emailInput'], $_POST['commentInput'])) {
+        if ($_POST['emailInput'] != "" and $_POST['commentInput'] != "") {
+            if (!isset($_SESSION['last_comment']) or $_SESSION['last_comment'] != md5($_POST['commentInput'])) {
+                $email = addslashes($_POST['emailInput']);
+                $comment = addslashes($_POST['commentInput']);
 
+                $u_ip = $u_ym_uid = $u_geo = $u_width = "";
 
+                if (isset($_SERVER['REMOTE_ADDR'])) {
+                    $u_ip = $_SERVER['REMOTE_ADDR'];
+                }
+
+                if (isset($_COOKIE['_ym_uid'])) {
+                    $u_ym_uid = $_COOKIE['_ym_uid'];
+                }
+
+                if (isset($_SERVER['GEOIP_COUNTRY_NAME'])) {
+                    $u_geo .= $_SERVER['GEOIP_COUNTRY_NAME'] . " / ";
+                }
+
+                if (isset($_SERVER['GEOIP_REGION'])) {
+                    $u_geo .= $_SERVER['GEOIP_REGION'] . " / ";
+                }
+
+                if (isset($_SERVER['GEOIP_CITY'])) {
+                    $u_geo .= $_SERVER['GEOIP_CITY'] . " / ";
+                }
+
+                if (isset($_COOKIE['width'])) {
+                    $u_width = $_COOKIE['width'];
+                }
+
+                $link = new mysqli('fluidline.beget.tech', 'fluidline_hy_lok', 'K3&PrZMJ', 'fluidline_hy_lok', 3306);
+                $link->query(
+                    "INSERT INTO `user_request` (`u_mail`, `u_comment`, `u_ip`, `u_ym_uid`, `u_geo`, `u_width`) VALUES ('$email', '$comment', '$u_ip', '$u_ym_uid', '$u_geo', '$u_width')"
+                );
+
+                $_SESSION['last_comment'] = md5($comment);
+            }
+        }
+    }
 
 include __DIR__ . "/page.html";

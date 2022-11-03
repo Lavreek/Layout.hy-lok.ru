@@ -36,26 +36,13 @@
 }
 
 .body-certificates .carousel-item .certificates .cert img {
-    width: 100%;
+    width: inherit;
 }
 
 section .body-certificates .carousel-control-next,
 section .body-certificates .carousel-control-prev {
     filter: invert(100%);
 
-}
-
-.body-certificates .carousel-control-prev {
-    /*padding-left: 100px;*/
-}
-
-.body-certificates .carousel-control-next {
-    /*padding-right: 100px;*/
-}
-
-.body-certificates .carousel-control-next,
-.body-certificates .carousel-control-prev {
-    /*width: auto !important;*/
 }
 
 
@@ -65,65 +52,55 @@ section .body-certificates .carousel-control-prev {
 }
 
 @media (min-width: 1440.1px) {
-    .body-certificates .carousel-control-next-icon {
-        padding-right: 100px;
-    }
-
-    .body-certificates .carousel-control-prev-icon {
-        padding-left: 100px;
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 17vw;
     }
 }
 
 @media (max-width: 1440px) {
-    .body-certificates .carousel {
-        padding: 0 156px;
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 35px;
     }
 
-    .body-certificates .carousel-control-next {
-        padding-right: 56px;
-    }
-
-    .body-certificates .carousel-control-prev {
-        padding-left: 56px;
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 24vw;
     }
 }
 
 @media (max-width: 1024px) {
-    .body-certificates .carousel-item .certificates .cert img {
-        width: 245px;
-    }
-
     .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
         height: 62px !important;
     }
 
-    .body-certificates .carousel-control-next {
-        padding-right: 20px;
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 30px;
     }
 
-    .body-certificates .carousel-control-prev {
-        padding-left: 20px;
-    }
-
-    .body-certificates .carousel-control-next-icon {
-        padding-right: 50px;
-    }
-
-    .body-certificates .carousel-control-prev-icon {
-        padding-left: 50px;
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 23vw;
     }
 }
 
 @media (max-width: 768px) {
-
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 23vw;
+    }
 }
 
 @media (max-width: 576px) {
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 25px;
+    }
 
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 35vw;
+    }
 }
 
 @media (max-width: 425px) {
-
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 20px;
+    }
 }
 
 @media (max-width: 375px) {

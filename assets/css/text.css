@@ -169,17 +169,28 @@ section .body-catalogs .catalogs-container .catalogs .catalog .description .link
 }
 
 @media (max-width: 1024px) {
-
+    section .body-productions .product .header {
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 
 @media (max-width: 768px) {
-
+    section .body-productions .product .header {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 @media (max-width: 576px) {
     section .body-info .description .text-header {
         font-size: 24px;
         line-height: 29px;
+    }
+
+    section .body-productions .product .header {
+        font-size: 17px;
+        line-height: 21px;
     }
 }
 
@@ -199,18 +210,13 @@ section .body-catalogs .catalogs-container .catalogs .catalog .description .link
         line-height: 25px;
     }
 
-    section .body-productions .product .header {
-        font-size: 17px;
-        line-height: 20px;
-    }
-
     section .body-another .header {
         font-size: 17px;
         line-height: 20px;
     }
 
     section .body-catalogs .catalogs-container .catalogs .catalog .description .text {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
     }
 

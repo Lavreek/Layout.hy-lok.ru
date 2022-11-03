@@ -143,7 +143,7 @@ header .header-action .header-links li {
 
 @media (max-width: 425px) {
     header, .header-divider {
-        height: 46px;
+        height: 61px;
     }
 }
 
