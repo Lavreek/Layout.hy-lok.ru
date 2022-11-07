@@ -64,8 +64,8 @@
 
     $catalogs = putCatalogs(5);
 
-    if (isset($_POST['emailInput'], $_POST['commentInput'])) {
-        if ($_POST['emailInput'] != "" and $_POST['commentInput'] != "") {
+    if (isset($_POST['emailInput'], $_POST['commentInput'], $_COOKIE['width'])) {
+        if ($_POST['emailInput'] != "" and $_POST['commentInput'] != "" and $_COOKIE['width'] > 0) {
             if (!isset($_SESSION['last_comment']) or $_SESSION['last_comment'] != md5($_POST['commentInput'])) {
                 $email = addslashes($_POST['emailInput']);
                 $comment = addslashes($_POST['commentInput']);

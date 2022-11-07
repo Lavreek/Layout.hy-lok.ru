@@ -12,6 +12,6 @@ $('.btn-show-more').on('click', function () {
             .addClass(['catalogs-row', 'hide'])
             .removeClass('show');
 
-        $(this).empty().append('Показать большеgit');
+        $(this).empty().append('Показать больше');
     }
 });
