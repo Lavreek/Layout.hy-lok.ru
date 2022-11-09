@@ -12,12 +12,8 @@ section .body-info .preview img {
     height: inherit;
 }
 
-section .body-info .description .description-text .collapse-container {
-    margin-top: 2em;
-}
-
 section .body-info .description .description-text .collapse-container p {
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 section .body-info .description .description-collapse {
@@ -35,6 +31,10 @@ section .body-info .description .description-collapse button {
 
     color: white;
     background: #263C8A;
+}
+
+section .body-info .description .description-text .main-text p {
+    margin-top: 2em;
 }
 
 section .body-info .description .collapse .collapse-container {

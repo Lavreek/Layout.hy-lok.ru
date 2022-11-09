@@ -62,7 +62,7 @@ header .header-action .header-links li {
 
 @media (max-width: 1280px) {
     header .header-action .header-links li {
-        padding: 0 2em;
+        padding: 0 28px;
     }
 }
 

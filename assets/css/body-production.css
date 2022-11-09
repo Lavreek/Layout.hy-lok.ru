@@ -92,8 +92,13 @@ section .body-productions .product .header {
 
 section .body-productions .product,
 section .body-productions .caption-cover,
-section .body-productions .image-cover {
+section .body-productions .image-cover,
+section .body-productions .image-cover img {
     min-width: 135px;
+}
+
+section .body-productions .image-cover img {
+    min-height: 135px;
 }
 
 

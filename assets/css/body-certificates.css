@@ -42,9 +42,7 @@
 section .body-certificates .carousel-control-next,
 section .body-certificates .carousel-control-prev {
     filter: invert(100%);
-
 }
-
 
 .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
     width: 8rem !important;
@@ -58,6 +56,14 @@ section .body-certificates .carousel-control-prev {
 }
 
 @media (max-width: 1440px) {
+    section .body-certificates .carousel-control-next-icon {
+        padding-right: 50px;
+    }
+
+    section .body-certificates .carousel-control-prev-icon {
+        padding-left: 50px;
+    }
+
     section .body-certificates .carousel-item .certificates {
         grid-gap: 35px;
     }
@@ -104,5 +110,11 @@ section .body-certificates .carousel-control-prev {
 }
 
 @media (max-width: 375px) {
+    section .body-certificates .carousel-control-next-icon {
+        padding-right: 35px;
+    }
 
+    section .body-certificates .carousel-control-prev-icon {
+        padding-left: 35px;
+    }
 }

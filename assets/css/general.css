@@ -71,10 +71,12 @@ ul, p {
     }
 
     section .body-certificates .carousel-control-next {
+        padding-right: 6.7%;
         width: 6.7%;
     }
 
     section .body-certificates .carousel-control-prev {
+        padding-left: 6.7%;
         width: 6.7%;
     }
 }
