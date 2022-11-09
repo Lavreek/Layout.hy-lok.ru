@@ -1,0 +1,39 @@
+@media (max-width: 768px) and (min-width: 576px) {
+
+    section .body-info .description .text-tab:before {
+        margin-left: 0;
+    }
+
+    .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 170px;
+    }
+
+    .body-certificates .carousel {
+        padding: 0 30px;
+    }
+
+
+    .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+        height: 62px !important;
+    }
+
+    .body-certificates .carousel-control-next {
+        padding-right: 20px;
+    }
+
+    .body-certificates .carousel-control-prev {
+        padding-left: 20px;
+    }
+
+    .body-certificates .carousel-control-next-icon {
+        padding-right: 50px;
+    }
+
+    .body-certificates .carousel-control-prev-icon {
+        padding-left: 50px;
+    }
+
+    footer .footer-logo .image img {
+        width: 225px;
+    }
+}

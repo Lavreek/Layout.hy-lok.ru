@@ -1,0 +1,108 @@
+.body-certificates {
+    background: #F0F0F0;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+}
+
+.body-certificates .carousel {
+    padding: 0 200px;
+    margin-bottom: 0;
+}
+
+.body-certificates .header {
+    margin: auto;
+    margin-bottom: 1em;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.body-certificates .carousel-item {
+    margin-bottom: 0;
+}
+
+.body-certificates .carousel-item .certificates {
+    display: flex;
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.body-certificates .carousel-item .certificates .cert {
+    width: 350px;
+    margin-bottom: 0;
+}
+
+.body-certificates .carousel-item .certificates .cert img {
+    width: inherit;
+}
+
+section .body-certificates .carousel-control-next,
+section .body-certificates .carousel-control-prev {
+    filter: invert(100%);
+
+}
+
+
+.body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+    width: 8rem !important;
+    height: 100%!important;
+}
+
+@media (min-width: 1440.1px) {
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 17vw;
+    }
+}
+
+@media (max-width: 1440px) {
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 35px;
+    }
+
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 24vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+        height: 62px !important;
+    }
+
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 30px;
+    }
+
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 23vw;
+    }
+}
+
+@media (max-width: 768px) {
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 23vw;
+    }
+}
+
+@media (max-width: 576px) {
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 25px;
+    }
+
+    section .body-certificates .carousel-item .certificates .cert {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 425px) {
+    section .body-certificates .carousel-item .certificates {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+
+}

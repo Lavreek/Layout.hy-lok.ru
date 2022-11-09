@@ -1,0 +1,181 @@
+@media (min-width: 320px) and (max-width: 375px) {
+    .body-catalogs .catalogs-container .catalogs {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    section .body-productions-header,
+    section .body-productions {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    section .body-productions .product .product-hover {
+        width: 100%;
+    }
+
+    .product-hover .caption {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 148px !important;
+        max-width: 148px !important;
+        overflow: hidden !important;
+    }
+
+    .product-hover .caption ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .product-hover .caption, .product-hover .image {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    header .header-action {
+        align-items: center;
+    }
+
+    header .header-action .header-links {
+        align-items: center;
+        padding: 0;
+    }
+
+    header .header-action .header-extra {
+        position: fixed;
+        right: 16px;
+        bottom: 24px;
+        border-radius: 12px;
+    }
+
+    header .header-action .header-extra button {
+        padding: .5em 2em;
+    }
+
+    header .header-action .header-links li {
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    header .header-logo a img {
+        width: 100px;
+    }
+
+    .body-scroll {
+        display: none;
+    }
+
+    section .body-info .description p + p {
+        margin-bottom: 2em;
+    }
+
+    section .body-info .description .text-tab:before {
+        margin-left: 0;
+    }
+
+    section .body-another {
+        margin: 3em 0;
+    }
+
+    section .body-another .companies {
+        flex-wrap: wrap;
+    }
+
+    section .body-another .companies div {
+        padding: 0;
+        padding-right: .5em;
+        padding-bottom: 1.5em;
+    }
+
+    section .body-another .companies div img {
+        max-width: 130px;
+        height: 39px;
+    }
+
+    .body-catalogs .under-certs {
+        padding: 0 30px;
+    }
+
+
+
+    .body-catalogs .catalogs-container .catalogs .catalog .image img {
+        width: 70px;
+    }
+
+    .body-certificates .carousel {
+        padding: 0 25px;
+    }
+
+    .body-certificates .carousel-item .certificates {
+        grid-gap: 20px;
+    }
+
+    .body-certificates .carousel-item .certificates .cert img, .body-certificates .carousel-item .certificates .cert {
+        width: 109px;
+    }
+
+    .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+        height: 62px !important;
+    }
+
+    .body-certificates .carousel-control-next {
+        padding-right: 20px;
+    }
+
+    .body-certificates .carousel-control-prev {
+        padding-left: 20px;
+    }
+
+    .body-certificates .carousel-control-next-icon {
+        padding-right: 50px;
+    }
+
+    .body-certificates .carousel-control-prev-icon {
+        padding-left: 50px;
+    }
+
+    footer {
+        padding: 41px 25px;
+    }
+
+    footer .footer-container {
+        flex-wrap: wrap;
+        justify-content: start;
+        margin-bottom: .75em;
+    }
+
+    footer .footer-container .footer-logo {
+        min-width: 100%;
+    }
+
+    footer .footer-container .footer-links {
+        order: 2;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    footer .footer-container .footer-contacts .text, footer .footer-container .footer-links .text {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    footer .footer-container .footer-links .header, footer .footer-contacts .header {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    footer .footer-container .footer-logo .image img {
+        width: 177px;
+    }
+
+    footer .footer-container .footer-logo .links ul {
+        padding: 20px 0;
+    }
+
+    .footer-contacts {
+        padding-right: 0;
+    }
+
+}

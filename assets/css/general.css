@@ -1,0 +1,194 @@
+html, body, header, section, footer {
+    min-width: 320px;
+    max-width: 1920px;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 320px;
+}
+
+ul, p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1440.1px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 10.43%;
+        padding-right: 10.43%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 10.43%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 10.43%;
+    }
+}
+
+@media (max-width: 1440px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 10.76%;
+        padding-right: 10.76%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 10.76%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 10.76%;
+    }
+}
+
+@media (max-width: 1280px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 6.7%;
+        padding-right: 6.7%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 6.7%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 6.7%;
+    }
+}
+
+@media (max-width: 1024px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 6.64%;
+        padding-right: 6.64%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 6.64%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 6.64%;
+    }
+}
+
+@media (max-width: 768px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 6.25%;
+        padding-right: 6.25%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 6.25%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 6.25%;
+    }
+
+    .body-scroll {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    header, footer,
+    section .body-info,
+    section.body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 5.2%;
+        padding-right: 5.2%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 5.2%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 5.2%;
+    }
+}
+
+@media (max-width: 425px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 5.8%;
+        padding-right: 5.8%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 5.8%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 5.8%;
+    }
+}
+
+@media (max-width: 375px) {
+    header, footer,
+    section .body-info,
+    section .body-scroll,
+    section .body-productions-header,
+    section .body-productions,
+    section .body-another,
+    section .body-catalogs,
+    section .body-certificates .carousel {
+        padding-left: 5.3%;
+        padding-right: 5.3%;
+    }
+
+    section .body-certificates .carousel-control-next {
+        width: 5.3%;
+    }
+
+    section .body-certificates .carousel-control-prev {
+        width: 5.3%;
+    }
+}

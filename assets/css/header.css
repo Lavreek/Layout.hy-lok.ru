@@ -1,0 +1,154 @@
+header, .header-divider {
+    height: 90px;
+}
+
+header {
+    width: 100vw;
+    z-index: 9999;
+    position: fixed;
+
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-divider {
+    margin: 0;
+}
+
+header .header-logo a,
+header .header-logo a img {
+    width: inherit;
+}
+
+
+header .header-action {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-links {
+    display: inherit;
+    list-style: none;
+}
+
+header .header-action .header-extra button {
+    padding: .5em 3em;
+    border: 0;
+
+    background: #263C8A;
+}
+
+header .header-action .header-links li {
+    padding: 0 4em;
+}
+
+@media (min-width: 1440.1px) {
+
+}
+
+@media (max-width: 1440px) {
+    header .header-logo {
+        width: 225px;
+    }
+
+    header .header-action .header-links li {
+        padding: 0 3em;
+    }
+}
+
+@media (max-width: 1280px) {
+    header .header-action .header-links li {
+        padding: 0 2em;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    header, .header-divider {
+        height: 97px;
+    }
+
+    header .header-action {
+        align-items: center;
+    }
+
+    header .header-action .header-links {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+
+    header .header-logo a img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 768.1px) {
+    header .telto-mini, header .mailto-mini {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header .telto-mini, header .mailto-mini {
+        display: block;
+    }
+
+    header .mailto-title, header .telto-title {
+        display: none;
+    }
+
+    header .header-action .header-links {
+        flex-direction: row;
+    }
+
+    header, .header-divider {
+        height: 89px;
+    }
+
+    header .header-action {
+        align-items: center;
+    }
+
+    header .header-action .header-links {
+        align-items: center;
+        padding: 0;
+    }
+
+    header .header-action .header-links li {
+        padding: 0 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    header .header-action .header-links li {
+        padding: 0 2em;
+    }
+
+    header .header-action .header-extra {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        border-radius: 12px;
+    }
+
+    header .header-action .header-extra button {
+        padding: .5em 2em;
+    }
+}
+
+@media (max-width: 425px) {
+    header, .header-divider {
+        height: 61px;
+    }
+}
+
+@media (max-width: 375px) {
+    header .header-logo a img {
+        width: 100px;
+    }
+}
