@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <base href="{{ app.request.getSchemeAndHttpHost() }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="На сайте вы сможете найти обширный каталог оборудования hy-lok В Москве. Доставка по всей стране. Наши консультанты всегда помогут с каталогом hy-lok, обращайтесь по телефону">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" href="https://hy-lok.ru/favicon.ico" type="image/x-icon">
+        <link rel="canonical" href="https://hy-lok.ru/" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        {# { include('samples/metrika.html') } #}
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %} {{ include('samples/header.html.twig') }} {% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %} {{ include('samples/footer.html.twig') }} {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

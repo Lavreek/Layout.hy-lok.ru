@@ -1,0 +1,62 @@
+section .body-banner img {
+    width: 100%;
+    max-height: 600px;
+}
+
+@media (min-width: 1440.1px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    section .body-banner .carousel-item {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    section .body-banner .carousel-item img {
+        margin: 0;
+        padding: 0;
+        height: 464px;
+        width: auto !important;
+        margin-left: -60px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    section .body-banner .carousel-item {
+        height: auto;
+    }
+
+    section .body-banner .carousel-item img {
+        height: 341px;
+    }
+}
+
+@media (max-width: 425px) {
+    section .body-banner .carousel-item {
+        height: auto;
+    }
+
+    section .body-banner .carousel-item img {
+        height: 281px;
+    }
+}
+
+@media (max-width: 375px) {
+    section .body-banner .carousel-item {
+        height: auto;
+    }
+
+    section .body-banner .carousel-item img {
+        height: 258px;
+    }
+}

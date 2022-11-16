@@ -1,0 +1,315 @@
+a, p, div {
+    font-weight: 400;
+    font-family: Inter;
+}
+
+.link-mailto, .link-telto {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+footer .footer-container .footer-links .header,
+footer .footer-container .footer-contacts .header,
+section .body-info .description .text-header {
+    font-weight: 500;
+}
+header .header-action .header-extra button,
+section .body-catalogs .under-certs .btn-show-more {
+    color: white;
+}
+
+footer .footer-container .footer-logo .links ul li a {
+    color: #848484;
+}
+
+section .body-catalogs .catalogs-container .catalogs .catalog .description .link {
+    color: #263C8A;
+}
+
+@media (min-width: 1440.1px) {
+    header .header-links li a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    header .header-action .header-extra button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    section .body-info .description .text-header {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    section .body-info .description p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    section .body-productions .product .header {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    section .body-another .header {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .link {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    section .body-catalogs .under-certs .btn-show-more {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    footer .footer-container .footer-logo .links ul li a {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    footer .footer-container .footer-links .header,
+    footer .footer-container .footer-contacts .header {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    footer .footer-container .footer-links .text,
+    footer .footer-container .footer-contacts .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    footer .under-footer .date {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 1440px) {
+    header .header-links li a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    header .header-action .header-extra button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    section .body-info .description .text-header {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    section .body-info .description p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    section .body-productions .product .header {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    section .body-another .header {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .link {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    section .body-catalogs .under-certs .btn-show-more {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    footer .footer-container .footer-logo .links ul li a {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    footer .footer-container .footer-links .header,
+    footer .footer-container .footer-contacts .header {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    footer .footer-container .footer-links .text,
+    footer .footer-container .footer-contacts .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    footer .under-footer .date {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 1024px) {
+    section .body-productions .product .header {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    section .body-productions .product .header {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    section .body-info .description .text-header {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section .body-productions .product .header {
+        font-size: 17px;
+        line-height: 21px;
+    }
+}
+
+@media (max-width: 425px) {
+    header .header-action .header-extra button {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    section .body-info .description .text-header {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section .body-info .description p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    section .body-another .header {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .link {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    section .body-catalogs .under-certs .btn-show-more {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    footer .footer-container .footer-logo .links ul li a {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    footer .footer-container .footer-links .header,
+    footer .footer-container .footer-contacts .header {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    footer .footer-container .footer-links .text,
+    footer .footer-container .footer-contacts .text {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    footer .under-footer .date {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    section .body-info .description .text-header {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    section .body-info .description p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    section .body-productions .product .header {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    section .body-another .header {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .description .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    section .body-catalogs .under-certs .btn-show-more {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    footer .footer-container .footer-logo .links ul li a {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    footer .footer-container .footer-links .header,
+    footer .footer-container .footer-contacts .header {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    footer .footer-container .footer-links .text,
+    footer .footer-container .footer-contacts .text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    footer .under-footer .date {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .modal .modal-content form .modal-body .body-container .text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+}

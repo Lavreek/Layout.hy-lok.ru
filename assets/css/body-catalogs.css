@@ -1,0 +1,182 @@
+.body-catalogs {
+    margin-top: 2em;
+    margin-bottom: 45px;
+}
+
+.body-catalogs .catalogs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-catalogs .catalogs-container .header {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-bottom: .75em;
+}
+
+section .body-catalogs .catalogs-container .catalogs {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    display: grid;
+    grid-column-gap: 40px;
+    align-items: start;
+    justify-content: space-between;
+    text-align: center;
+
+    width: 100%;
+}
+
+section .body-catalogs .catalogs-container .catalogs-row {
+    grid-template-rows: 1fr;
+    grid-auto-rows: 0;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog {
+    width: 225px;
+    margin-bottom: 0;
+}
+
+.body-catalogs .catalogs-container .catalogs .catalog .description .text {
+    margin-bottom: .5em;
+}
+
+.body-catalogs .under-certs {
+    display: flex;
+    justify-content: end;
+}
+
+section .body-catalogs .under-certs .btn-show-more {
+    margin-top: 1em;
+    padding: .5em 2em;
+    border: 0;
+    background: #263C8A;
+}
+
+section .body-catalogs .catalogs-container .catalogs {
+    overflow: hidden;
+}
+
+section .body-catalogs .catalogs-container .catalogs .catalog .image {
+    margin: auto;
+    margin-bottom: .5em;
+}
+
+section .body-catalogs .catalogs-container .catalogs .catalog .image img {
+    width: inherit;
+}
+
+@media (min-width: 1440.1px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 10vw;
+        margin-bottom: 2em;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 6vw;
+    }
+}
+
+@media (max-width: 1440px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 13vw;
+        margin-bottom: 2em;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 8vw;
+    }
+}
+@media (max-width: 1280px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 16vw;
+        margin-bottom: 2em;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 8vw;
+    }
+}
+
+@media (max-width: 768px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 25vw;
+        margin-bottom: 2em;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 12vw;
+    }
+}
+
+@media (max-width: 576px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        justify-content: center;
+        grid-column-gap: 20px;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 25vw;
+        margin-bottom: 2em;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 18vw;
+    }
+}
+
+@media (max-width: 425px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-column-gap: 30px;
+        justify-content: center;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 25vw;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 15vw;
+    }
+
+    section .body-catalogs .under-certs {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    section .body-catalogs .catalogs-container .catalogs {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog {
+        width: 40vw;
+    }
+
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 20vw;
+    }
+}

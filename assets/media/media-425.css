@@ -1,0 +1,122 @@
+@media (max-width: 425px) and (min-width: 375px) {
+    section .body-productions {
+        grid-gap: 15px;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    header .header-action {
+        align-items: center;
+    }
+
+    header .header-action .header-links {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    header .header-action .header-links li {
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    header .header-logo a img {
+        width: 100px;
+    }
+
+    .body-scroll {
+        display: none;
+    }
+
+    section .body-info .preview {
+        float: left;
+
+        text-align: center;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    section .body-info .description {
+        margin-top: -80px;
+    }
+
+    section .body-info .description p + p {
+        margin-bottom: 2em;
+    }
+
+    section .body-info .description .text-tab:before {
+        margin-left: 0;
+    }
+
+    section .body-productions {
+        justify-content: space-evenly;
+    }
+
+
+    section .body-another .companies {
+        flex-wrap: wrap;
+    }
+
+    section .body-another .companies div {
+        padding: 0;
+        padding-right: 1.7em;
+        padding-bottom: 1.5em;
+    }
+
+    section .body-another .companies div img {
+        max-width: 180px;
+        height: 39px;
+    }
+
+    .body-catalogs .under-certs {
+        padding: 0 30px;
+    }
+
+    .body-catalogs .catalogs-container .catalogs {
+        display: flex;
+    }
+
+    .body-catalogs .catalogs-container .catalogs .catalog .image img {
+        width: 70px;
+    }
+
+    .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+        height: 62px !important;
+    }
+
+    .body-certificates .carousel-control-next-icon {
+        padding-right: 50px;
+    }
+
+    .body-certificates .carousel-control-prev-icon {
+        padding-left: 50px;
+    }
+
+    footer {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
+
+    footer .footer-container {
+        flex-wrap: wrap;
+    }
+
+    footer .footer-container .footer-links {
+        order: 2;
+    }
+
+    footer .footer-container .footer-logo .image img {
+        width: 177px;
+    }
+
+    footer .footer-container .footer-logo .links ul {
+        padding: 20px 0;
+    }
+
+    .footer-contacts {
+        padding-right: 0;
+    }
+}
