@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Validate;
 use App\Repository\UserRequestsRepository;
 use Doctrine\DBAL\Types\Types;
@@ -26,7 +27,8 @@ class UserRequests
     #[ORM\Column(length: 15)]
     private ?string $u_ip = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
+    #[UniqueEntity('u_ym_uid')]
     private ?string $u_ym_uid = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -38,6 +40,9 @@ class UserRequests
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
     private ?\DateTimeInterface $created_at = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $fingerprint_id = null;
 
     public function getId(): ?int
     {
@@ -124,6 +129,18 @@ class UserRequests
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getFingerprintId(): ?string
+    {
+        return $this->fingerprint_id;
+    }
+
+    public function setFingerprintId(string $fingerprint_id): self
+    {
+        $this->fingerprint_id = $fingerprint_id;
 
         return $this;
     }

@@ -102,7 +102,11 @@ Encore
         to: 'slides/[path][name].[ext]',
         pattern: /\.(png|PNG)$/
     })
-
+    .copyFiles({
+        from: './assets/catalogs',
+        to: 'catalogs/[path][name].[ext]',
+        pattern: /\.(pdf|PDF)$/
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

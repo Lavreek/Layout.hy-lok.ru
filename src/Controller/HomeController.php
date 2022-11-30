@@ -18,51 +18,71 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_root', methods: ['GET'])]
-    public function index(Request $request, ManagerRegistry $doctrine): Response
+    public function index(): Response
     {
-        $serverData = $request->server->all();
-        $cookieData = $request->cookies->all();
+        $catalogRoot = $_SERVER['DOCUMENT_ROOT'] . "/assets/catalogs";
+        $directories = array_diff(scandir($catalogRoot), ['.', '..']);
 
-        if (isset($cookieData['width'])) {
-            $EntityManager = $doctrine->getManager();
-            $UserVisit = new UserVisit();
-            $UserVisit->setUIp($serverData['REMOTE_ADDR']);
-            $UserVisit->setSitePage('root');
+        $catalogArray = [];
+        foreach ($directories as $directory) {
+            $files = array_diff(scandir($catalogRoot . "/" . $directory), ['.', '..']);
 
-            $geo = "";
-            if (isset($serverData['GEOIP_COUNTRY_NAME'])) {
-                $geo .= $serverData['GEOIP_COUNTRY_NAME'] . " / ";
+            foreach ($files as $file) {
+                $filename = trim(str_replace(['_', '-', '.pdf'], ' ', $file));
+                array_push($catalogArray, ['name' => $filename, 'path' => $directory . "/" . $file]);
             }
-
-            if (isset($serverData['GEOIP_REGION'])) {
-                $geo .= $serverData['GEOIP_REGION'] . " / ";
-            }
-
-            if (isset($serverData['GEOIP_CITY'])) {
-                $geo .= $serverData['GEOIP_CITY'] . " / ";
-            }
-            $UserVisit->setUGeo($geo);
-
-            $UserVisit->setUWidth($cookieData['width']);
-            $UserVisit->setCreatedAt(new \DateTime());
-            $UserVisit->setUYmUid($cookieData['_ym_uid']);
-            $EntityManager->persist($UserVisit);
-            $EntityManager->flush();
         }
-
-        $catalogArray = [
-            "Каталог фитингов и труб",
-            "Каталог клапанов",
-            "Каталог для чистых сред ZCR",
-            "Каталог интрументальных манифольдов",
-            "Каталог фитингов под приварку",
-        ];
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'certificates' => 4,
             'catalogs' => $catalogArray,
         ]);
+    }
+
+    #[Route('/visit', name: 'app_visit', methods: ['POST'])]
+    public function visit(Request $request, ManagerRegistry $doctrine): JsonResponse
+    {
+        $serverData = $request->server->all();
+        $requestData = $request->request->all();
+        $cookieData = $request->cookies->all();
+
+        if (isset($cookieData['_ym_uid'])) {
+            $visit = $doctrine->getRepository(UserVisit::class);
+
+            $client = $visit->findOneBy(['u_ym_uid' => $cookieData['_ym_uid']]);
+
+            if (!$client) {
+                $EntityManager = $doctrine->getManager();
+                $UserVisit = new UserVisit();
+                $UserVisit->setUIp($serverData['REMOTE_ADDR']);
+                $UserVisit->setSitePage('root');
+
+                $geo = "";
+                if (isset($serverData['GEOIP_COUNTRY_NAME'])) {
+                    $geo .= $serverData['GEOIP_COUNTRY_NAME'] . " / ";
+                }
+
+                if (isset($serverData['GEOIP_REGION'])) {
+                    $geo .= $serverData['GEOIP_REGION'] . " / ";
+                }
+
+                if (isset($serverData['GEOIP_CITY'])) {
+                    $geo .= $serverData['GEOIP_CITY'] . " / ";
+                }
+                $UserVisit->setUGeo($geo);
+
+                $UserVisit->setUWidth($requestData['Width']);
+                $UserVisit->setCreatedAt(new \DateTime());
+                $UserVisit->setUYmUid($cookieData['_ym_uid']);
+                $UserVisit->setFingerprintId($requestData['FINGERPRINT_ID']);
+                $EntityManager->persist($UserVisit);
+                $EntityManager->flush();
+
+                return new JsonResponse('Done!');
+            }
+        }
+        return new JsonResponse('falied :(');
     }
 
     #[Route('/', name: 'app_create_request', methods: ['POST'])]
@@ -114,6 +134,15 @@ class HomeController extends AbstractController
             } else {
                 $UserRequest->setUYmUid("");
             }
+
+            if (isset($cookieData['FINGERPRINT_ID'])) {
+                $UserRequest->setFingerprintId($cookieData['FINGERPRINT_ID']);
+            } else {
+                $UserRequest->setFingerprintId("");
+            }
+
+            $UserVisit->setUYmUid($cookieData['FINGERPRINT_ID']);
+
 
             $errors = $validator->validate($UserRequest);
 

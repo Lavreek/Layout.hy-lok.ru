@@ -4,7 +4,38 @@
 
 {% block body %}
     <section>
-        {{ include('blocks/banner.html.twig') }}
+        <div class="body-banner">
+            <div id="carouselBanner" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators body-scroll">
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="30000">
+                        <img src="assets/slides/1.png" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="30000">
+                        <img src="assets/slides/2.png" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="30000">
+                        <img src="assets/slides/3.png" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="30000">
+                        <img src="assets/slides/4.png" class="d-block w-100" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" style="display: none;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" style="display: none;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
         <div class="body-info">
             <div class="preview">
                 <img src="/assets/main/preview.png" alt="">
@@ -219,8 +250,78 @@
                 <button type="button" class="btn-show-more">Показать больше</button>
             </div>
         </div>
-        {{ include('blocks/certificates.html.twig') }}
+        <style>
+            .body-certificates-new {
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+            }
+            .slides {
+                display: flex;
+            }
+            .slide-btn {
+                position: absolute;
+            }
+            .btn-prev {
+                left: 0;
+            }
+            .btn-next {
+                right: 0;
+            }
+        </style>
+        <div class="body-certificates-new">
+            <div class="custom-slider">
+                <div class="slides">
+                    <div class="slide first">
+                        <img src='assets/certs/cert1.png' alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src='assets/certs/cert1.png' alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src='assets/certs/cert1.png' alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src='assets/certs/cert1.png' alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src='assets/certs/cert1.png' alt="">
+                    </div>
+                </div>
+                <div class="slide-btn" style="position: absolute;">
+                    <a class="btn-prev"><</a>
+                    <a class="btn-next">></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="body-certificates">
+            <div class="header">
+                <p>Сертификаты hy-lok</p>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for i in 1..certificates|length + 10 %}
+                        <div class="carousel-item {% if i < 5 %}active{% endif %}" data-bs-interval="50000">
+                            <div class='cert'>
+                                <img src='assets/certs/cert1.png'>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
     </section>
+
     <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

@@ -179,4 +179,11 @@ section .body-catalogs .catalogs-container .catalogs .catalog .image img {
     section .body-catalogs .catalogs-container .catalogs .catalog .image {
         width: 20vw;
     }
+
+}
+
+@media (max-width: 320px) {
+    section .body-catalogs .catalogs-container .catalogs .catalog .image {
+        width: 40vw;
+    }
 }

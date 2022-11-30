@@ -1,4 +1,8 @@
 
+.env
+.idea
+/assets/catalogs/
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,8 +12,6 @@
 /public/assets/
 /var/
 /vendor/
-.env
-.idea
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###

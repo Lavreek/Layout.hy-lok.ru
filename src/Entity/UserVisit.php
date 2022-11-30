@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use App\Repository\UserVisitRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -26,11 +27,15 @@ class UserVisit
     #[ORM\Column]
     private ?int $u_width = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
+    #[UniqueEntity('u_ym_uid')]
     private ?string $u_ym_uid = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
     private ?\DateTimeInterface $created_at = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $fingerprint_id = null;
 
     public function getId(): ?int
     {
@@ -105,6 +110,18 @@ class UserVisit
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getFingerprintId(): ?string
+    {
+        return $this->fingerprint_id;
+    }
+
+    public function setFingerprintId(string $fingerprint_id): self
+    {
+        $this->fingerprint_id = $fingerprint_id;
 
         return $this;
     }

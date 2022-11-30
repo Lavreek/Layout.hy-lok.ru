@@ -21,9 +21,14 @@ ul, p {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
+    .hylok-carousel-container,
     section .body-certificates .carousel {
         padding-left: 10.43%;
         padding-right: 10.43%;
+    }
+
+    .hylok-carousel-button {
+        width: 10.43%;
     }
 
     section .body-certificates .carousel-control-next {
@@ -43,9 +48,14 @@ ul, p {
     section .body-productions,
     section .body-another,
     section .body-catalogs,
+    .hylok-carousel-container,
     section .body-certificates .carousel {
         padding-left: 10.76%;
         padding-right: 10.76%;
+    }
+
+    .hylok-carousel-button {
+        width: 10.76%;
     }
 
     section .body-certificates .carousel-control-next {

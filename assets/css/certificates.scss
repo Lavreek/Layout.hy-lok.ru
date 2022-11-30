@@ -1,0 +1,243 @@
+.body-certificates {
+  background: #F0F0F0;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.body-certificates .carousel {
+  padding: 0 200px;
+  margin-bottom: 0;
+}
+
+.body-certificates .header {
+  margin: auto;
+  margin-bottom: 1em;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.body-certificates .carousel-item {
+  margin-bottom: 0;
+}
+
+.body-certificates .carousel-item .certificates .cert {
+  width: 350px;
+  margin-bottom: 0;
+}
+
+.body-certificates .carousel-item .certificates .cert img {
+  width: inherit;
+}
+
+section .body-certificates .carousel-control-next,
+section .body-certificates .carousel-control-prev {
+  filter: invert(100%);
+}
+
+.body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+  width: 8rem !important;
+  height: 100%!important;
+}
+
+@media (min-width: 1440.1px) {
+  section .body-certificates .carousel-item .certificates .cert {
+    width: 17vw;
+  }
+}
+
+@media (max-width: 1440px) {
+  section .body-certificates .carousel-control-next-icon {
+    padding-right: 50px;
+  }
+
+  section .body-certificates .carousel-control-prev-icon {
+    padding-left: 50px;
+  }
+
+  section .body-certificates .carousel-item .certificates {
+    grid-gap: 35px;
+  }
+
+  section .body-certificates .carousel-item .certificates .cert {
+    width: 24vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .body-certificates .carousel-control-next-icon, .body-certificates .carousel-control-prev-icon {
+    height: 62px !important;
+  }
+
+  section .body-certificates .carousel-item .certificates {
+    grid-gap: 30px;
+  }
+
+  section .body-certificates .carousel-item .certificates .cert {
+    width: 23vw;
+  }
+}
+
+@media (max-width: 768px) {
+  section .body-certificates .carousel-item .certificates .cert {
+    width: 23vw;
+  }
+}
+
+@media (max-width: 576px) {
+  section .body-certificates .carousel-item .certificates {
+    grid-gap: 25px;
+  }
+
+  section .body-certificates .carousel-item .certificates .cert {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 425px) {
+  section .body-certificates .carousel-item .certificates {
+    grid-gap: 20px;
+  }
+}
+
+.body-certificates {
+    .carousel {
+        @media (max-width: 1440px) {
+          
+        }
+
+        .carousel-inner {
+
+            .carousel-item {
+
+                .certificates {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .carousel-control-next {
+            display: none;
+
+            @media (max-width: 1440px) {
+                display: flex;
+            }
+
+            .carousel-control-next-icon {
+                @media (max-width: 375px) {
+                    padding-right: 35px;
+                }
+            }
+        }
+
+        .carousel-control-prev {
+            display: none;
+
+            @media (max-width: 1440px) {
+                display: flex;
+            }
+
+            .carousel-control-prev-icon {
+                @media (max-width: 375px) {
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+}
+
+.hylok-carousel {
+    position: relative;
+
+    .hylok-carousel-container {
+        overflow: hidden;
+        display: flex;
+        column-gap: 5vw;
+
+        @media (max-width: 768px) {
+            column-gap: 4vw;
+        }
+        @media (max-width: 768px) {
+            column-gap: 1vw;
+        }
+
+        .certificates-item {
+            
+            .certificate {
+                width: 22.38vw;
+              
+                @media (min-width: 1921px) {
+                    width: 16vw;
+                }
+
+                @media (max-width: 1920px) {
+                    width: 16vw;
+                }
+
+                @media (max-width: 1440px) {
+                    width: 22.38vw;
+                }
+
+                @media (max-width: 1024px) {
+                    width: 22.8vw;
+                }
+
+                @media (max-width: 768px) {
+                    width: 25.39vw;
+                }
+
+                @media (max-width: 576px) {
+                    width: 25.5vw;
+                }
+
+                @media (max-width: 425px) {
+                    width: 39vw;
+                }
+
+                img {
+                    width: inherit;
+                }
+            }
+        }
+    }
+    .hylok-carousel-button {
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        top: 0;
+        bottom: 0;
+        border: 0;
+
+        @media (min-width: 1441px) {
+            display: none;
+        }
+
+        @media (max-width: 1440px) {
+            display: flex;
+        }
+
+        img {
+            @media (max-width: 768px) {
+                width: 3.2vw;
+            }
+
+            @media (max-width: 425px) {
+                min-width: 15px;
+                width: 5.8vw;
+            }
+        }
+    }
+
+    .button-prev {
+        left: 0;
+    }
+    .button-next {
+        right: 0;
+    }
+}
