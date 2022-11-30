@@ -39,6 +39,7 @@ import './bootstrap';
 
 import './js/sendRequest';
 import './js/scroll';
+import './js/jquery.cookie'
 
 
 $(document).ready(function () {
@@ -59,14 +60,18 @@ $(document).ready(function () {
         .then(fp => fp.get())
         .then(result => {
             // This is the visitor identifier:
-            const visitorId = result.visitorId
+            const visitorId = result.visitorId;
+            let width = $(window).width();
+
+            $.cookie('FINGERPRINT_ID', visitorId);
+            $.cookie('width', width);
 
             $.ajax({
                 type: "POST",
                 url: '/visit',
                 data:
                     'FINGERPRINT_ID=' + visitorId +
-                    '&Width=' + $(window).width(),
+                    '&Width=' + width,
 
                 success: function (data) {
                     console.log(data);

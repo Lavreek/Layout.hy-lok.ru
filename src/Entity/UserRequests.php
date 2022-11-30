@@ -27,8 +27,7 @@ class UserRequests
     #[ORM\Column(length: 15)]
     private ?string $u_ip = null;
 
-    #[ORM\Column(length: 255, unique: true)]
-    #[UniqueEntity('u_ym_uid')]
+    #[ORM\Column(length: 255)]
     private ?string $u_ym_uid = null;
 
     #[ORM\Column(type: Types::TEXT)]
