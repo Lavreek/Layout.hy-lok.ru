@@ -31,7 +31,7 @@ class UserVisit
     #[UniqueEntity('u_ym_uid')]
     private ?string $u_ym_uid = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $created_at = null;
 
     #[ORM\Column(type: Types::TEXT)]

@@ -141,7 +141,7 @@ class HomeController extends AbstractController
                 $UserRequest->setFingerprintId("");
             }
 
-            $UserVisit->setUYmUid($cookieData['FINGERPRINT_ID']);
+            $UserRequest->setFingerprintId($cookieData['FINGERPRINT_ID']);
 
 
             $errors = $validator->validate($UserRequest);
