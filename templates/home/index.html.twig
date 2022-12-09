@@ -202,7 +202,8 @@
                 <div class="header">
                     <p>Каталоги</p>
                 </div>
-                <div class="catalogs catalogs-row hide">
+             <!--noindex-->
+             <div class="catalogs catalogs-row hide">
                     {%  for catalog in catalogs %}
                         <div class='catalog'>
                             <div class='image'>
@@ -211,7 +212,7 @@
                                 </a>
                             </div>
                             <div class='description'>
-                                <p class='text'><!--noindex-->{{ catalog['name'] }}<!--/noindex--></p>
+                                <p class='text'>{{ catalog['name'] }}</p>
                                 <a class='link' href='/assets/catalogs/{{ catalog['path'] }}' download>Скачать</a>
                             </div>
                         </div>
@@ -263,3 +264,4 @@
         </div>
     </div>
 {% endblock %}
+<!--/noindex-->
