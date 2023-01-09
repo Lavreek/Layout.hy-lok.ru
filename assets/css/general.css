@@ -1,6 +1,5 @@
 html, body, header, section, footer {
     min-width: 320px;
-    max-width: 1920px;
 }
 
 body {
@@ -11,6 +10,17 @@ body {
 
 ul, p {
     margin-bottom: 0;
+}
+
+@media (min-width: 1921px) {
+    .carousel-inner {
+        background: #263C8A;
+    }
+
+    .carousel-item img {
+        max-width: 1920px;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1440.1px) {
