@@ -12,6 +12,10 @@ ul, p {
     margin-bottom: 0;
 }
 
+.link-mailto, .link-telto {
+    cursor: pointer;
+}
+
 @media (min-width: 1921px) {
     .carousel-inner {
         background: #263C8A;
