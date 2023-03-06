@@ -15,6 +15,8 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
+use App\Controller\VisitorController;
+
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_root', methods: ['GET'])]
@@ -48,6 +50,19 @@ class HomeController extends AbstractController
         $cookieData = $request->cookies->all();
 
         if (isset($cookieData['_ym_uid'])) {
+            $response = [];
+
+            $visitor = new VisitorController();
+
+            if (!isset($cookieData['vid'])) {
+                $vid = $visitor->searchVisitor($doctrine, $cookieData);
+
+                if (is_null($vid)) {
+                    $vid = $visitor->generateVisitor($doctrine, $serverData, $cookieData, $requestData);
+                    $response['vid'] = $vid;
+                }
+            }
+
             $visit = $doctrine->getRepository(UserVisit::class);
 
             $client = $visit->findOneBy(['u_ym_uid' => $cookieData['_ym_uid']]);
@@ -73,16 +88,19 @@ class HomeController extends AbstractController
                 $UserVisit->setUGeo($geo);
 
                 $UserVisit->setUWidth($requestData['Width']);
-                $UserVisit->setCreatedAt(new \DateTime());
+                $UserVisit->setCreatedAt(new \DateTime(date("Y-m-d H:i:s")));
                 $UserVisit->setUYmUid($cookieData['_ym_uid']);
                 $UserVisit->setFingerprintId($requestData['FINGERPRINT_ID']);
                 $EntityManager->persist($UserVisit);
                 $EntityManager->flush();
 
-                return new JsonResponse('Done!');
+                $response['new-client'] = "added.";
             }
+
+            return new JsonResponse(['params' => $response, 'message' => 'Done!'], 200);
+
         }
-        return new JsonResponse('falied :(');
+        return new JsonResponse('falied :(', 200);
     }
 
     #[Route('/', name: 'app_create_request', methods: ['POST'])]

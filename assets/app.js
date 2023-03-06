@@ -74,7 +74,13 @@ $(document).ready(function () {
                     '&Width=' + width,
 
                 success: function (data) {
-                    console.log(data);
+                    if (data['params']['vid'] !== undefined) {
+                        let vid = data['params']['vid'];
+
+                        $('.mailto-header').attr('href', 'mailto:' + vid + "@hy-lok.ru");
+                        $('.mail-text').innerText = vid;
+                        $.cookie('vid', vid);
+                    }
                 }
             });
         })

@@ -6,14 +6,18 @@
     </div>
     <div class="header-action">
         <ul class="header-links">
-            <li><a class="link-mailto mailto-header" href="mailto:mail@hy-lok.ru">
-                    <label class="mailto-title">mail@hy-lok.ru</label>
+            <li>
+                <a class="link-mailto mailto-header" href="mailto:{{ getVid(app.request.cookies) }}@hy-lok.ru">
+                    <label class="mailto-title"><span class="mail-text">{{ getVid(app.request.cookies) }}</span>@hy-lok.ru</label>
                     <img class="mailto-mini" src="assets/main/mailto.svg">
-                </a></li>
-            <li><a class="link-telto telto-header" href="tel:+70000000000">
+                </a>
+            </li>
+            <li>
+                <a class="link-telto telto-header" href="tel:+70000000000">
                     <label class="telto-title">+7 (900) 123-45-67</label>
                     <img class="telto-mini" src="assets/main/telto.svg">
-                </a></li>
+                </a>
+            </li>
         </ul>
         <div class="header-extra">
             <button type="button" data-bs-toggle="modal" data-bs-target="#modalForm">Как заказать</button>
