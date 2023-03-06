@@ -77,8 +77,8 @@ $(document).ready(function () {
                     if (data['params']['vid'] !== undefined) {
                         let vid = data['params']['vid'];
 
-                        $('.mailto-header').attr('href', 'mailto:' + vid + "@hy-lok.ru");
-                        $('.mail-text').innerText = vid;
+                        $('.link-mailto').attr('href', 'mailto:' + vid + "@hy-lok.ru");
+                        $('.mail-text').empty().append(vid);
                         $.cookie('vid', vid);
                     }
                 }

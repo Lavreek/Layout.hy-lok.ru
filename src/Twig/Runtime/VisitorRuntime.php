@@ -37,7 +37,7 @@ class VisitorRuntime extends AbstractController implements RuntimeExtensionInter
                 return $visitor->getVid();
             }
 
-            return 'mail';
         }
+        return 'mail';
     }
 }
