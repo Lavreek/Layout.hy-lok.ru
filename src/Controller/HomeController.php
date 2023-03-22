@@ -11,11 +11,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-
-use App\Controller\VisitorController;
 
 class HomeController extends AbstractController
 {
@@ -58,7 +55,7 @@ class HomeController extends AbstractController
                 $vid = $visitor->searchVisitor($doctrine, $cookieData);
 
                 if (is_null($vid)) {
-                    $vid = $visitor->generateVisitor($doctrine, $serverData, $cookieData, $requestData);
+                    $vid = $visitor->generateVisitor($doctrine, $serverData, $cookieData);
                     $response['vid'] = $vid;
                 }
             }
@@ -98,7 +95,6 @@ class HomeController extends AbstractController
             }
 
             return new JsonResponse(['params' => $response, 'message' => 'Done!'], 200);
-
         }
         return new JsonResponse('falied :(', 200);
     }
@@ -160,8 +156,6 @@ class HomeController extends AbstractController
             }
 
             $UserRequest->setFingerprintId($cookieData['FINGERPRINT_ID']);
-
-
             $errors = $validator->validate($UserRequest);
 
             if (count($errors) < 1) {

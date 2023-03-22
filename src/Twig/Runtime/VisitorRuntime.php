@@ -10,14 +10,13 @@ use Twig\Extension\RuntimeExtensionInterface;
 
 class VisitorRuntime extends AbstractController implements RuntimeExtensionInterface
 {
-    private $registry;
+    private ManagerRegistry $registry;
 
     public function __construct(ManagerRegistry $registry)
     {
         // Inject dependencies if needed
         $this->registry = $registry;
     }
-
 
     public function getVid($cookies)
     {
@@ -36,8 +35,8 @@ class VisitorRuntime extends AbstractController implements RuntimeExtensionInter
 
                 return $visitor->getVid();
             }
-
         }
+
         return 'mail';
     }
 }

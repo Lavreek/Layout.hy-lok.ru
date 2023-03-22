@@ -5,6 +5,5 @@ $(document).ready(function () {
         let width = $(window).width();
 
         $.cookie('width', width);
-        window.location.reload();
     }
 })
